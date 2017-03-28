@@ -21,7 +21,6 @@ describe('generateLocationMessage', ()=> {
 		var longitude = 2.714671;
 		var url = `https://www.google.com/maps?q=${latitude},${longitude}`;
 		var location = generateLocationMessage(from, latitude, longitude);
-		console.log(location);
 		expect(location).toInclude({from,url});
 		expect(location.createAt).toBeA('number');
 	});
